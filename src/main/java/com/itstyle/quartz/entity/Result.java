@@ -2,6 +2,7 @@ package com.itstyle.quartz.entity;
 
 import java.util.HashMap;
 import java.util.Map;
+
 /**
  * 页面响应entity
  */

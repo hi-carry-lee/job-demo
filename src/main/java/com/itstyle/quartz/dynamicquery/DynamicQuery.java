@@ -1,5 +1,7 @@
 package com.itstyle.quartz.dynamicquery;
+
 import java.util.List;
+
 /**
  * 扩展SpringDataJpa, 支持动态jpql/nativesql查询并支持分页查询
  */

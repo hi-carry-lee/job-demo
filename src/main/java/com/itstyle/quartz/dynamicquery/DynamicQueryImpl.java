@@ -1,4 +1,5 @@
 package com.itstyle.quartz.dynamicquery;
+
 import java.util.List;
 
 import javax.persistence.EntityManager;
@@ -10,9 +11,11 @@ import org.hibernate.transform.Transformers;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Repository;
+
 /**
  * 动态jpql/nativesql查询的实现类
  */
+
 @Repository
 public class DynamicQueryImpl implements DynamicQuery {
 
