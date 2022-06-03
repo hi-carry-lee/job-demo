@@ -4,7 +4,10 @@ import java.io.Serializable;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
+import com.itstyle.quartz.web.JobController;
 import org.quartz.*;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * 实现序列化接口、防止重启应用出现quartz Couldn't retrieve job because a required class was not found 的问题
@@ -14,6 +17,8 @@ import org.quartz.*;
  */
 @DisallowConcurrentExecution
 public class ChickenJob implements  Job,Serializable {
+
+    private final static Logger LOGGER = LoggerFactory.getLogger(ChickenJob.class);
 
 	private static final long serialVersionUID = 1L;
 
@@ -37,10 +42,12 @@ public class ChickenJob implements  Job,Serializable {
             e.printStackTrace();
         }
     }
+
     public void test1(){
-        System.out.println("测试方法1");
+        System.out.println("test1");
     }
-    public void test2(){
-	    System.out.println("测试方法2");
+
+    public void queryPriceByName(){
+	    System.out.println("模拟测试");
     }
 }

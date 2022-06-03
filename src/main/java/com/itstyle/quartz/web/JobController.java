@@ -110,7 +110,8 @@ public class JobController {
             scheduler.unscheduleJob(triggerKey);  
             // 删除任务  
             scheduler.deleteJob(JobKey.jobKey(quartz.getJobName(), quartz.getJobGroup()));  
-            System.out.println("removeJob:"+JobKey.jobKey(quartz.getJobName()));  
+
+			LOGGER.info("removeJob: {}", JobKey.jobKey(quartz.getJobName()));
         } catch (Exception e) {  
         	e.printStackTrace();
             return Result.error();
